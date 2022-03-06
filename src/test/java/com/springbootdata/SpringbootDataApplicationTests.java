@@ -23,9 +23,11 @@ class SpringbootDataApplicationTests {
         try {
             connection = dataSource.getConnection();
             System.out.println("==>"+connection);
+            connection.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
     }
 
 }

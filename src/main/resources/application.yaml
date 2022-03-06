@@ -4,3 +4,13 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/hotpot?useUnicode=true&characterEncoding=utf-8&serveTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.springbootdata.pojo    #别名的包
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  下划线转驼峰
+#  configuration:
+#    map-underscore-to-camel-case: true
